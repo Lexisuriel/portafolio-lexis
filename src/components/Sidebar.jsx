@@ -1,3 +1,5 @@
+import cv from '../assets/CV_Lexis_Uriel_Leyva_.pdf';
+
 function Sidebar() {
   return (
     <aside>
@@ -26,7 +28,7 @@ function Sidebar() {
         <h4>Descargar CV</h4>
       <a
   className="btn"
-  href="/CV-Lexis-Uriel-leyva.pdf"
+  href={cv}
   target="_blank"
   rel="noopener noreferrer"
   download

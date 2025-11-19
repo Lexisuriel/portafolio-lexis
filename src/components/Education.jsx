@@ -22,8 +22,6 @@ function Education() {
 
           </a>
         </li>
-        <li>Curso de PHP avanzado (indicar plataforma)</li>
-        <li>Introducción a PWA y Service Workers</li>
       </ul>
     </div>
   );
