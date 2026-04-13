@@ -13,7 +13,7 @@ function Header() {
         <h1>
           Lexis Uriel Leyva 
           <span style={{fontWeight: '500', color: 'var(--muted)', fontSize: '14px'}}>
-            · Técnico Superior Universitario
+            ·  Técnico Superior Universitario En Tecnologías De La Información Área Desarrollo De Software Multiplataforma 
           </span>
         </h1>
         <div className="subtitle">
