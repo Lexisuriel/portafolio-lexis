@@ -17,7 +17,7 @@ function Header() {
           </span>
         </h1>
         <div className="subtitle">
-          Desarrollador backend en formación · PHP · JavaScript · MariaDB · React 
+          Desarrollador backend y Frontend en formación · PHP · JavaScript · MariaDB · React · Python · nextjs · Tailwind CSS · GSAP
         </div>
         <div className="cta">
           <a className="btn" href="#contact">Contactar</a>

@@ -5,17 +5,21 @@ function About() {
     <div className="card about">
       <h2 style={{marginTop: '0'}}>Acerca de mí</h2>
       <p>
-        Soy estudiante de la Universidad Tecnológica de la Costa Grande de Guerrero, 
+        Soy egresado de la Universidad Tecnológica de la Costa Grande de Guerrero, 
         apasionado por el desarrollo de software y la creación de soluciones prácticas. 
-        He trabajado en el proyecto <strong>Boxha Café</strong>, desarrollando el backend 
+        He trabajado en el proyecto <strong>Boxha Café</strong>,<strong>CROSS ARMY Fitness</strong> y <strong>ProPiel</strong>, desarrollando el backend 
         y las interfaces para cliente y administrador usando PHP, JavaScript y MariaDB. 
-        Me gusta crear aplicaciones accesibles, optimizadas y fáciles de mantener.
+        Me gusta crear aplicaciones accesibles, optimizadas y fáciles de mantener y entender el desarrollo de software.
+        También me gusta aprender nuevas tecnologías y me gusta compartir mi conocimiento con la comunidad.
+
       </p>
 
       <div style={{display: 'flex', gap: '18px', marginTop: '16px', alignItems: 'center'}}>
         <div>
           <div style={{fontSize: '12px', color: 'var(--muted)'}}>Ubicación</div>
           <div>Zihuatanejo, Guerrero, México</div>
+
+          <div>Accesible a cambiar Ubicación y al trabajo remoto</div>
         </div>
         <div>
           <div style={{fontSize: '12px', color: 'var(--muted)'}}>Contacto</div>
