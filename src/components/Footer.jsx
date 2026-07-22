@@ -1,7 +1,8 @@
 function Footer() {
   return (
     <footer>
-      Hecho por <strong>Lexis Uriel Leyva</strong>  · Disponible para prácticas y proyectos.
+      <p>© {new Date().getFullYear()} Lexis Uriel Leyva Fernández</p>
+      <p>Desarrollador de Software · Java · Spring Boot · React · Angular</p>
     </footer>
   )
 }

@@ -1,95 +1,47 @@
 .technologies-section {
-  margin-top: 18px;
+  overflow: hidden;
 }
 
-.technologies-grid {
+.technology-groups {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 16px;
-  justify-items: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
 }
 
-.tech-item {
+.technology-group {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.technology-group h3 {
+  margin: 0 0 12px;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.technology-list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
-  padding: 12px;
-  border-radius: 12px;
-  background: var(--glass);
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  min-height: 90px;
-  justify-content: center;
 }
 
-.tech-item:hover {
-  transform: translateY(-4px);
-  background: rgba(124, 58, 237, 0.1);
-  border-color: rgba(124, 58, 237, 0.3);
-  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.15);
-}
-
-.tech-icon {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.tech-item:hover .tech-icon {
-  transform: scale(1.1);
-}
-
-.custom-icon {
-  width: 40px;
-  height: 40px;
-  background: #88CE02;
-  border-radius: 8px;
-  display: flex;
+.technology-pill {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 12px;
-  color: white;
-}
-
-.tech-name {
-  font-size: 12px;
+  min-height: 30px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--glass);
   color: var(--muted);
-  text-align: center;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  font-size: 12px;
+  font-weight: 650;
+  border: 1px solid rgba(255, 255, 255, 0.045);
 }
 
-.tech-item:hover .tech-name {
-  color: #e6eef8;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .technologies-grid {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 12px;
-  }
-  
-  .tech-item {
-    padding: 8px;
-    min-height: 80px;
-  }
-  
-  .tech-icon {
-    width: 32px;
-    height: 32px;
-  }
-  
-  .tech-name {
-    font-size: 11px;
-  }
-}
-
-@media (max-width: 480px) {
-  .technologies-grid {
-    grid-template-columns: repeat(4, 1fr);
+@media (max-width: 700px) {
+  .technology-groups {
+    grid-template-columns: 1fr;
   }
 }

@@ -1,96 +1,93 @@
-function Projects() {
-  const projects = [
-    {
-      id: 1,
-      initials: 'BF',
-      title: 'Boxha Café — Plataforma de pedidos',
-      description: 'Desarrollo backend y diseño de base de datos con MariaDB. Módulos para cliente y administrador, autenticación y gestión de productos.',
-      tags: ['PHP', 'MariaDB', 'JavaScript']
-    },
-    {
-      id: 2,
-      initials: 'P1',
-      title: 'Aplicación PWA — Demo',
-      description: 'Implementación de service worker, cache inteligente y modo offline para una experiencia web progresiva.',
-      tags: ['PWA', 'Service Worker']
-    },
-    {
-      id: 3,
-      initials: 'HW',
-      title: 'Mini Sumo — Robot Autónomo',
-      description: 'Control con Arduino Nano, control de motores L293D y sensores de distancia. Código y diagrama de pines incluidos.',
-      tags: ['Arduino', 'Robótica']
-    },
-    {
-      id: 4,
-      initials: 'BD',
-      title: 'Renombrador PDF — App de escritorio',
-      description: 'Aplicación moderna en Python (Tkinter) para renombrar archivos PDF basados en datos de Excel, con una interfaz limpia y profesional.',
-      tags: ['Python', 'Tkinter', 'Excel']
-    },
-    {
-      id: 5,
-      initials: 'BT',
-      title: 'Conexión Bluetooth — Comunicación móvil',
-      description: 'Desarrollo en Ionic React con Capacitor para comunicación entre dispositivos mediante Bluetooth clásico (HC-06).',
-      tags: ['Ionic', 'React', 'Bluetooth']
-    },
-    {
-      id: 6,
-      initials: 'DS',
-      title: 'Dashboard Dinámico — Control de archivos',
-      description: 'Panel web con roles de usuario y administrador, subida de imágenes y generación automática de pantallas con carruseles.',
-      tags: ['React', 'Node.js', 'MySQL']
-    },
-    {
-      id: 7,
-      initials: 'SR',
-      title: 'Sistema de Reconocimiento — Seguridad',
-      description: 'Prototipo de control de acceso con reconocimiento facial usando OpenCV y base de datos local para almacenamiento.',
-      tags: ['Python', 'OpenCV', 'Seguridad']
-    },
-    {
-      id: 8,
-      initials: 'LP',
-      title: 'Landing Page — Proyecto especial',
-      description: 'Sitio interactivo creado con React, Vite y GSAP. Incluye animaciones, imágenes y videos personalizados con un mensaje especial.',
-      tags: ['React', 'GSAP', 'Bootstrap']
-    },
-    {
-      id: 9,
-      initials: 'MS',
-      title: 'Monitor de Sensores IoT — ESP32',
-      description: 'Sistema para lectura de sensores de temperatura y humedad, con envío de datos a una API y visualización en tiempo real.',
-      tags: ['ESP32', 'IoT', 'API']
-    },
-    {
-      id: 10,
-      initials: 'SC',
-      title: 'Simulador de Ciberataques — Educativo',
-      description: 'Entorno controlado para prácticas de ciberseguridad, simulando ataques comunes y aplicando medidas defensivas.',
-      tags: ['Ciberseguridad', 'Linux', 'Networking']
-    }
-  ]
+const projects = [
+  {
+    id: 'pice-iot',
+    initials: 'IoT',
+    title: 'Plataforma IoT full-stack',
+    organization: 'Pice Software, S. A. de C. V.',
+    description:
+      'Plataforma que conecta dispositivos ESP8266 con una aplicación web multiusuario. Incluye más de 35 endpoints REST, autenticación JWT y roles, asistentes virtuales personalizables, datos en tiempo real y cuatro paneles especializados.',
+    highlights: [
+      'Integración con Google Calendar mediante OAuth 2.0 y OpenWeatherMap.',
+      'AWS Aurora con MySQL, React, Tailwind CSS, Chart.js y GSAP.',
+      'Documentación OpenAPI/Swagger, pruebas con JMeter y pipelines en Jenkins.',
+    ],
+    tags: ['Java 21', 'Spring Boot', 'React', 'AWS Aurora', 'JWT', 'IoT'],
+  },
+  {
+    id: 'propiel',
+    initials: 'PP',
+    title: 'Sistema web para clínica dermatológica',
+    organization: 'Pro-Piel Dermatología',
+    description:
+      'Sistema integral para administrar pacientes, citas, consentimientos y expedientes médicos, con control por roles, manejo de archivos e imágenes, metadatos EXIF, generación de PDF y paneles dinámicos.',
+    highlights: [
+      'API REST con Spring Boot, OpenFeign, Eureka Server y seguridad JWT.',
+      'Frontend responsivo con Angular y TypeScript.',
+      'Oracle y PL/SQL con procedimientos, triggers y cursores; persistencia con Hibernate/JPA.',
+    ],
+    tags: ['Java 8', 'Spring Boot', 'Angular', 'Oracle', 'PL/SQL', 'Microservicios'],
+  },
+  {
+    id: 'boxha',
+    initials: 'BC',
+    title: 'Plataforma web de gestión para cafetería',
+    organization: 'Boxha Café',
+    description:
+      'Aplicación web orientada a la administración de usuarios, roles y permisos, con autenticación segura, validaciones, cifrado de contraseñas y módulos para clientes y administradores.',
+    highlights: [
+      'Interfaz responsiva con Bootstrap, JavaScript y CSS.',
+      'Optimización de consultas SQL y tiempos de carga.',
+      'Pruebas funcionales, seguridad web y refactorización con principios de código limpio.',
+    ],
+    tags: ['PHP', 'MySQL', 'JavaScript', 'Bootstrap', 'Seguridad web'],
+  },
+  {
+    id: 'cross-army',
+    initials: 'CA',
+    title: 'Sistema web para gimnasio',
+    organization: 'Cross Army Fitness',
+    description:
+      'Proyecto de desarrollo web frontend y backend con interfaces responsivas, funciones dinámicas, registro e inicio de sesión, integración cliente-servidor y diseño de base de datos.',
+    highlights: [
+      'Desarrollo con PHP, CSS, JavaScript y MySQL.',
+      'Diseño de flujos de autenticación y persistencia de datos.',
+      'Trabajo colaborativo aplicando metodología Scrum.',
+    ],
+    tags: ['PHP', 'MySQL', 'JavaScript', 'CSS', 'Scrum'],
+  },
+]
 
+function Projects() {
   return (
-    <div className="card" style={{marginTop: '18px'}} id="proyectos">
-      <h2 style={{marginTop: '0'}}>Proyectos</h2>
-      
-      {projects.map(project => (
-        <article key={project.id} className="project">
-          <div className="proj-thumb">{project.initials}</div>
-          <div className="proj-info">
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <div className="tags">
-              {project.tags.map((tag, index) => (
-                <span key={index} className="tag">{tag}</span>
-              ))}
+    <section className="card" id="proyectos">
+      <div className="section-heading">
+        <p className="section-kicker">Casos de trabajo</p>
+        <h2>Proyectos destacados</h2>
+      </div>
+
+      <div className="projects-list">
+        {projects.map((project) => (
+          <article key={project.id} className="project">
+            <div className="proj-thumb" aria-hidden="true">{project.initials}</div>
+            <div className="proj-info">
+              <p className="project-organization">{project.organization}</p>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <ul className="project-highlights">
+                {project.highlights.map((highlight) => (
+                  <li key={highlight}>{highlight}</li>
+                ))}
+              </ul>
+              <div className="tags">
+                {project.tags.map((tag) => (
+                  <span key={tag} className="tag">{tag}</span>
+                ))}
+              </div>
             </div>
-          </div>
-        </article>
-      ))}
-    </div>
+          </article>
+        ))}
+      </div>
+    </section>
   )
 }
 

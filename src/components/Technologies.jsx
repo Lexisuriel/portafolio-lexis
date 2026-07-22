@@ -1,57 +1,53 @@
 import './Technologies.css'
 
-function Technologies() {
-  const technologies = [
-    { name: 'HTML5', icon: 'html' },
-    { name: 'CSS3', icon: 'css' },
-    { name: 'Bootstrap', icon: 'bootstrap' },
-    { name: 'Tailwind CSS', icon: 'tailwind' },
-    { name: 'JavaScript', icon: 'js' },
-    { name: 'TypeScript', icon: 'ts' },
-    { name: 'Java', icon: 'java' },
-    { name: 'Python', icon: 'py' },
-    { name: 'React', icon: 'react' },
-    { name: 'Next.js', icon: 'nextjs' },
-    { name: 'Vite', icon: 'vite' },
-    { name: 'Node.js', icon: 'nodejs' },
-    { name: 'Express', icon: 'express' },
-    { name: 'MySQL', icon: 'mysql' },
-    { name: 'Arduino', icon: 'arduino' },
-    { name: 'Android Studio', icon: 'androidstudio' },
-    { name: 'Linux', icon: 'linux' },
-    { name: 'Git', icon: 'git' },
-    { name: 'GitHub', icon: 'github' },
-    { name: 'Figma', icon: 'figma' },
-    { name: 'VS Code', icon: 'vscode' },
-    { name: 'GSAP', icon: 'gsap', custom: true }
-  ]
+const technologyGroups = [
+  {
+    title: 'Backend y arquitectura',
+    items: ['Java 21 / 17 / 8', 'Spring', 'Spring Boot', 'API REST', 'Microservicios', 'Hibernate', 'JPA', 'JWT', 'OpenFeign', 'Eureka Server'],
+  },
+  {
+    title: 'Frontend y web',
+    items: ['React', 'Angular', 'TypeScript', 'JavaScript', 'Next.js', 'Node.js', 'Vite', 'Tailwind CSS', 'Bootstrap', 'GSAP'],
+  },
+  {
+    title: 'Bases de datos',
+    items: ['Oracle 19c', 'PL/SQL', 'MySQL', 'AWS Aurora', 'AWS RDS', 'MongoDB', 'MariaDB', 'H2'],
+  },
+  {
+    title: 'Cloud, DevOps y calidad',
+    items: ['AWS', 'Docker', 'Kubernetes', 'Jenkins', 'SonarQube', 'Git', 'GitHub', 'PM2', 'JUnit', 'JMeter'],
+  },
+  {
+    title: 'Documentación y herramientas',
+    items: ['OpenAPI', 'Swagger', 'Postman', 'SoapUI', 'Jira', 'DBeaver', 'SQL Developer', 'Spring Tool Suite', 'Eclipse', 'VS Code'],
+  },
+  {
+    title: 'Otros conocimientos',
+    items: ['C++', 'PHP', 'SOAP', 'XML', 'JSON', 'Android Studio', 'Apache Tomcat', 'GlassFish', 'Windows', 'Linux'],
+  },
+]
 
+function Technologies() {
   return (
-    <div className="card technologies-section" id="tecnologias">
-      <h2 style={{ marginTop: '0', textAlign: 'center', marginBottom: '24px' }}>
-        Tecnologías & Herramientas
-      </h2>
-      
-      <div className="technologies-grid">
-        {technologies.map((tech, index) => (
-          <div key={index} className="tech-item">
-            {tech.custom ? (
-              <div className="tech-icon custom-icon">
-                <span>GSAP</span>
-              </div>
-            ) : (
-              <img
-                src={`https://skillicons.dev/icons?i=${tech.icon}`}
-                alt={tech.name}
-                className="tech-icon"
-                loading="lazy"
-              />
-            )}
-            <span className="tech-name">{tech.name}</span>
-          </div>
+    <section className="card technologies-section" id="tecnologias">
+      <div className="section-heading">
+        <p className="section-kicker">Stack técnico</p>
+        <h2>Tecnologías y herramientas</h2>
+      </div>
+
+      <div className="technology-groups">
+        {technologyGroups.map((group) => (
+          <article className="technology-group" key={group.title}>
+            <h3>{group.title}</h3>
+            <div className="technology-list">
+              {group.items.map((item) => (
+                <span className="technology-pill" key={item}>{item}</span>
+              ))}
+            </div>
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   )
 }
 
